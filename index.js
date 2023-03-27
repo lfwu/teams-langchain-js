@@ -73,6 +73,7 @@ const myBot = new EchoBot();
 // Listen for incoming requests.
 server.post('/api/messages', async (req, res) => {
     // Route received a request to adapter for processing
+    console.log('\n api messages\n');
     await adapter.process(req, res, (context) => myBot.run(context));
 });
 

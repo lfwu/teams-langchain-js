@@ -24,6 +24,7 @@ class BingSerpAPI extends Tool {
     const params = { q: input, textDecorations: "true", textFormat: "HTML" };
     const searchUrl = new URL('https://api.bing.microsoft.com/v7.0/search');
     
+    console.log('\n call BingSerpAPI\n');
     Object.entries(params).forEach(([key, value]) => {
       searchUrl.searchParams.append(key, value);
     });

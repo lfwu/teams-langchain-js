@@ -12,6 +12,8 @@ class PetFinderAPI extends Tool {
     const headers = { "Accept": "application/json" };
     const searchUrl = `https://petstore.swagger.io/v2/pet/findByStatus?status=${status}`;
 
+    console.log('\n call BingSerpAPI\n');
+
     const response = await fetch(searchUrl, { headers });
 
     if (!response.ok) {
